@@ -1,0 +1,57 @@
+Rahuls-MBP:blockchain rahul$ ./curl_params.sh 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: Origin
+Date: Sun, 24 Jun 2018 07:08:27 GMT
+Content-Length: 50
+
+{"result":{"balance":"290","nonce":"0","type":88}}Rahuls-MBP:blockchain rahul$ 
+
+Rahuls-MBP:blockchain rahul$ ./curl_check_in.sh 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: Origin
+Date: Sun, 24 Jun 2018 07:08:59 GMT
+Content-Length: 110
+{"result":{"txhash":"234301ae2e98735ce0c467a866fbcef507a2b3dce5d5d9983eac3af1d09b90b2","contract_address":""}}
+
+Rahuls-MBP:blockchain rahul$ ./curl_check_contract.sh 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: Origin
+Date: Sun, 24 Jun 2018 07:11:17 GMT
+Content-Length: 446
+
+{"result":{"hash":"234301ae2e98735ce0c467a866fbcef507a2b3dce5d5d9983eac3af1d09b90b2","chainId":100,"from":"n1FF1nz6tarkDVwWQkMnnwFPuPKUaQTdptE","to":"n1i3ToCvRr85Mfu3CRH7Bz4tuGGgrHaacn2","value":"150","nonce":"7","timestamp":"1529824139","type":"call","data":"eyJGdW5jdGlvbiI6InNhdmUiLCJBcmdzIjoiWzBdIn0=","gas_price":"1000000","gas_limit":"2000000","contract_address":"","status":1,"gas_used":"20438","execute_error":"","execute_result":"\"\""}}
+Rahuls-MBP:blockchain rahul$ ./curl_params.sh 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: Origin
+Date: Sun, 24 Jun 2018 07:11:28 GMT
+Content-Length: 50
+
+{"result":{"balance":"440","nonce":"0","type":88}}Rahuls-MBP:blockchain rahul$ ./curl_check_out.sh 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: Origin
+Date: Sun, 24 Jun 2018 07:13:37 GMT
+Content-Length: 110
+
+{"result":{"txhash":"cfd10b19b290089ef236e8d19cdccd321f87855c76389cd1bc2835b4a433574f","contract_address":""}}
+Rahuls-MBP:blockchain rahul$ 
+Rahuls-MBP:blockchain rahul$ 
+Rahuls-MBP:blockchain rahul$ ./curl_check_contract.sh 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: Origin
+Date: Sun, 24 Jun 2018 07:17:09 GMT
+Content-Length: 454
+
+{"result":{"hash":"cfd10b19b290089ef236e8d19cdccd321f87855c76389cd1bc2835b4a433574f","chainId":100,"from":"n1FF1nz6tarkDVwWQkMnnwFPuPKUaQTdptE","to":"n1i3ToCvRr85Mfu3CRH7Bz4tuGGgrHaacn2","value":"100","nonce":"8","timestamp":"1529824417","type":"call","data":"eyJGdW5jdGlvbiI6InRha2VvdXQiLCJBcmdzIjoiWzE1MF0ifQ==","gas_price":"1000000","gas_limit":"2000000","contract_address":"","status":1,"gas_used":"22610","execute_error":"","execute_result":"\"\""}}
+Rahuls-MBP:blockchain rahul$ ./curl_params.sh 
+HTTP/1.1 200 OK
+Content-Type: application/json
+Vary: Origin
+Date: Sun, 24 Jun 2018 07:17:14 GMT
+Content-Length: 50
+{"result":{"balance":"390","nonce":"0","type":88}}

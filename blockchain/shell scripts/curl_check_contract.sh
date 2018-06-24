@@ -1,0 +1,1 @@
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/user/getTransactionReceipt -d '{"hash":"cfd10b19b290089ef236e8d19cdccd321f87855c76389cd1bc2835b4a433574f"}'
