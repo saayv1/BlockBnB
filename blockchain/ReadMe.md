@@ -5,13 +5,19 @@ For the devs:
 
 2. After deploying the contract, ie after pressing the 'Submit' button on the 'Deploy' tab, you will get a 'txhash' and a 'contract_address'. Note them down
 
-3. Go to the 'Call' tab. Fill in the function and arguments. In the 'To Address' fill up the 'contract_address' from step 2. Enter the key and password. Click on the 'Test' button and then click 'Submit'.
+3. Go to the 'Call' tab. 
 
-4. Note down the new 'txhash'
+4. Fill in the function and arguments.
 
-5. Execute this command in the terminal 
+5.In the 'To Address' fill up the 'contract_address' from step 2. 
 
-`curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getEventsByHash -d '{"hash":"the new tx hash you just noted down in step 4"}'`
+6. Enter the key and password. Click on the 'Test' button and then click 'Submit'.
+
+7. Note down the new 'txhash'
+
+8. Execute this command in the terminal 
+
+`curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getEventsByHash -d '{"hash":"the new tx hash you just noted down in step 7"}'`
 
 You will get a result like this
 
