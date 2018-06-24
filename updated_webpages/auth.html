@@ -2,12 +2,29 @@
     <link rel="stylesheet" href="./ratchet/css/ratchet-theme-ios.min.css">
     <script src="./ratchet/js/ratchet.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <script>
+        $(".doTheBoogie").click(function(){
+            $.ajax({
+                url: "https://testnet.nebulas.io/v1/user/getEventsByHash",
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                processData: false,
+                data: {"hash":"146c4677ca6e2c2fb7ea22608f5a8f106fa4aae4dc1900b597e1ddb9b7210522"},
+                success: function (data) {
+                    alert(JSON.stringify(data));
+                },
+                error: function(){
+                alert("Cannot get data");
+                }
+            });
+        })
+    </script>
         <div id="loginbox">                    
             <form>
                 <input type="text" placeholder="Email">
                 <input type="email" placeholder="Password">
-                <button class="btn btn-positive btn-block">Login</button>
+                <button class="btn btn-positive btn-block doTheBoogie">Login</button>
                  <button class="btn btn-block"><a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">New User</button>
              </form>
         </div>
